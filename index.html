@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СДАМ ГИА: РЕШУ ЕГЭ - Образовательный портал</title>
+    <style>
+        /* Общие стили */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Шапка */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Навигация */
+        nav {
+            background-color: #34495e;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+
+        /* Основной контент */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1 1 300px;
+        }
+
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* Таблицы */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .main-content {
+                flex-direction: column;
+            }
+        }
+
+        /* Специальные стили для элементов */
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .subject-item {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .subject-item:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .program-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 20px;
+        }
+
+        .program-info h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .program-info ul {
+            margin-left: 20px;
+        }
+
+        .program-info li {
+            margin-bottom: 5px;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-success {
+            background-color: #2ecc71;
+        }
+
+        .btn-success:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>СДАМ ГИА: РЕШУ ЕГЭ</h1>
+            <p>Образовательный портал для подготовки к экзаменам</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Информатика</a></li>
+                <li><a href="#">Математика</a></li>
+                <li><a href="#">Русский язык</a></li>
+                <li><a href="#">Английский язык</a></li>
+                <li><a href="#">Физика</a></li>
+                <li><a href="#">Химия</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <div class="card">
+                <h2>Предметы</h2>
+                <div class="subject-grid">
+                    <div class="subject-item">Информатика</div>
+                    <div class="subject-item">Русский язык</div>
+                    <div class="subject-item">Английский язык</div>
+                    <div class="subject-item">Немецкий язык</div>
+                    <div class="subject-item">Французский язык</div>
+                    <div class="subject-item">Физика</div>
+                    <div class="subject-item">Химия</div>
+                    <div class="subject-item">География</div>
+                    <div class="subject-item">Обществознание</div>
+                    <div class="subject-item">Литература</div>
+                    <div class="subject-item">История</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Устная подготовка к ЕГЭ (ОГЭ на 5-10)</h2>
+                <div class="program-info">
+                    <h3>Всего вариантов:</h3>
+                    <p><strong>Программа № 18217059</strong></p>
+                    <p><strong>Срок реализации задачи:</strong></p>
+                    <ul>
+                        <li>Тема задания задач учителю, вы можете вносить или загрузить в систему ответа с заданием с разворотами ответов.</li>
+                        <li>Учитель узнает результаты выполнения заданий с ударами ответа и сложит задачу, загруженные ответы с заданием с разворотами ответов.</li>
+                        <li>Выставленные учителям было отображено в вашей статистике.</li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-primary">Начать подготовку</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Технические характеристики</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Вопрос 2</th>
+                        <th>Тема 1 № 182080 (6)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ОБ ЭКЗАМЕНЫ</td>
+                        <td>01 10 15 46</td>
+                    </tr>
+                    <tr>
+                        <td>Китайская область</td>
+                        <td>02 10 25 32</td>
+                    </tr>
+                    <tr>
+                        <td>Казань</td>
+                        <td>03 10 50 40</td>
+                    </tr>
+                    <tr>
+                        <td>Журнал</td>
+                        <td>04 05 22 50</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Подробности</h2>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Вопрос 3</th>
+                            <th>Тема 4</th>
+                            <th>Тема 5</th>
+                            <th>Тема 6</th>
+                            <th>Тема 7</th>
+                            <th>Тема 8</th>
+                            <th>Тема 9</th>
+                            <th>Тема 10</th>
+                            <th>Тема 11</th>
+                            <th>Тема 12</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Данные 1</td>
+                            <td>Данные 2</td>
+                            <td>Данные 3</td>
+                            <td>Данные 4</td>
+                            <td>Данные 5</td>
+                            <td>Данные 6</td>
+                            <td>Данные 7</td>
+                            <td>Данные 8</td>
+                            <td>Данные 9</td>
+                            <td>Данные 10</td>
+                        </tr>
+                        <!-- Добавьте больше строк по необходимости -->
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 15px; text-align: center;">
+                <a href="#" class="btn btn-success">Показать все темы</a>
+            </p>
+        </div>
+
+        <footer>
+            <p>© 2023 СДАМ ГИА: РЕШУ ЕГЭ. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript для интерактивности
+        document.addEventListener('DOMContentLoaded', function() {
+            // Обработка кликов по предметам
+            const subjectItems = document.querySelectorAll('.subject-item');
+            subjectItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const subjectName = this.textContent;
+                    alert(`Вы выбрали предмет: ${subjectName}. Переход к материалам...`);
+                    // Здесь можно добавить реальную навигацию
+                });
+            });
+
+            // Имитация загрузки данных
+            console.log('Сайт загружен. Добро пожаловать на образовательный портал!');
+
+            // Пример таймера для имитации активности
+            setInterval(() => {
+                const now = new Date();
+                document.title = `СДАМ ГИА (${now.toLocaleTimeString()})`;
+            }, 1000);
+
+            // Обработка кнопок
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Функционал в разработке. Скоро будет доступен!');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
